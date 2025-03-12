@@ -9,7 +9,7 @@ public class ConfigReader {
 
     public static  String ReadProperty(String key){
 
-        File file = new File("configuration.properties");
+        File file = new File("src/test/resources/configurations.properties");
 
         Properties properties = new Properties();
 
