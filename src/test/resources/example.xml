@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng-1.0.dtd">
+<suite name="Example project ">
+    <test name="1st functionality">
+        <classes>
+            <class name="tests.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
