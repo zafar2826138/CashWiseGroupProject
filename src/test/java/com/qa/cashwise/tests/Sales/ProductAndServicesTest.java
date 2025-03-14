@@ -4,9 +4,9 @@ import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 import com.qa.cashwise.pages.Login.LoginPage;
 import com.qa.cashwise.pages.Sales.ProductAndServicesPage;
-import com.qa.cashwise.tests.TesBase;
+import com.qa.cashwise.tests.TestBase;
 
-public class ProductAndServicesTest extends TesBase {
+public class ProductAndServicesTest extends TestBase {
 
 
     @Test

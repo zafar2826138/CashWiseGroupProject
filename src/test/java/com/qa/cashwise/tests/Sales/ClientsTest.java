@@ -1,6 +1,6 @@
 package com.qa.cashwise.tests.Sales;
 
-import com.qa.cashwise.tests.TesBase;
+import com.qa.cashwise.tests.TestBase;
 
-public class ClientsTest extends TesBase {
+public class ClientsTest extends TestBase {
 }

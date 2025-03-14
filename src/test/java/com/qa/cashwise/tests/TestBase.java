@@ -8,7 +8,7 @@ import utils.DriverHelper;
 
 import java.time.Duration;
 
-public class TesBase {
+public class TestBase {
     protected WebDriver driver = DriverHelper.getDriver();
     @BeforeMethod
     public void setup(){
