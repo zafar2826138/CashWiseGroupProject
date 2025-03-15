@@ -1,6 +1,6 @@
-package com.qa.cashwise.tests.Login;
+package com.qa.cashwise.tests.SgnIn;
 
-import com.qa.cashwise.pages.Login.SignInPage;
+import com.qa.cashwise.pages.SignIn.SignInPage;
 import com.qa.cashwise.tests.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

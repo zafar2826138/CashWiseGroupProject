@@ -1,7 +1,7 @@
 package com.qa.cashwise.tests.Expenses;
 
 import com.qa.cashwise.pages.Expenses.ProductAndServicesExpensePage;
-import com.qa.cashwise.pages.Login.Negative.SignInPage;
+import com.qa.cashwise.pages.SignIn.Negative.SignInPage;
 import com.qa.cashwise.tests.TestBase;
 
 import org.testng.annotations.Test;

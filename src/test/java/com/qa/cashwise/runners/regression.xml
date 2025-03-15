@@ -1,0 +1,37 @@
+<!DOCTYPE suite [
+        <!ELEMENT suite (test)*>
+        <!ATTLIST suite
+                name CDATA #REQUIRED>
+        <!ELEMENT test (classes)*>
+        <!ATTLIST test
+                name CDATA #REQUIRED>
+        <!ELEMENT classes (class)*>
+        <!ELEMENT class (#PCDATA)>
+        <!ATTLIST class
+                name CDATA #REQUIRED>
+        ]>
+<suite name="CashWise Group Project Regression Suite">
+
+    <test name="CashWise Test Cases">
+<!--        <parameter name="" value=""></parameter>-->
+
+        <classes>
+<!--            <class name="com.qa.cashwise.tests.SignUp.SignUpTest">  </class>-->
+            <class name="com.qa.cashwise.tests.SgnIn.SignInTest">  </class>
+            <class name="com.qa.cashwise.tests.SgnIn.ForgotPasswordLogTest">  </class>
+            <class name="com.qa.cashwise.tests.SgnIn.Negative.SignInTest">  </class>
+            <class name="com.qa.cashwise.tests.SgnIn.Negative.SignInTestData">  </class>
+            <class name="com.qa.cashwise.tests.Sales.InvoiceTest">  </class>
+            <class name="com.qa.cashwise.tests.Sales.ProductAndServicesTest">  </class>
+            <class name="com.qa.cashwise.tests.Sales.ClientsTest">  </class>
+            <class name="com.qa.cashwise.tests.Expenses.ProductAndServicesExpenseTest">  </class>
+
+
+
+        </classes>
+    </test>
+
+</suite>
+
+
+        <!-- runs whole application test cases (before release)-->

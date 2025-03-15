@@ -1,4 +1,4 @@
-package com.qa.cashwise.tests.Login.Negative;
+package com.qa.cashwise.tests.SgnIn.Negative;
 
 import org.testng.annotations.DataProvider;
 

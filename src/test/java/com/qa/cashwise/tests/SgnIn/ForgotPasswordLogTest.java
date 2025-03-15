@@ -1,6 +1,6 @@
-package com.qa.cashwise.tests.Login;
+package com.qa.cashwise.tests.SgnIn;
 
-import com.qa.cashwise.pages.Login.ForgotPassword;
+import com.qa.cashwise.pages.SignIn.ForgotPassword;
 import com.qa.cashwise.tests.TestBase;
 import org.testng.annotations.Test;
 

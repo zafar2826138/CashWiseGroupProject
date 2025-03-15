@@ -1,15 +1,21 @@
 package com.qa.cashwise.pages.SignUp;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import utils.BrowserUtils;
 import utils.ConfigReader;
+import utils.SeleniumUtils;
 
 public class SignUpPage {
+    Faker faker = new Faker();
+    String companyName = faker.company().name();
+
     public SignUpPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -56,12 +62,16 @@ public class SignUpPage {
     @FindBy(xpath = "//button[@class='MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root css-1hz3hle']")
     WebElement finalSignUpButton;
 
+    @FindBy(xpath = "//*[@id=\"header\"]/h2")
+    WebElement headerNameOfCompany;
+
     public void clickSignUpButton() {
         signUpButton.click();
     }
 
     public void sendEmailAndPasswordInfo() {
-        email.sendKeys(ConfigReader.ReadProperty("cashwise_email"));
+
+        email.sendKeys(faker.internet().emailAddress());
         password.sendKeys(ConfigReader.ReadProperty("cashwise_password"));
         passwordConfirm.sendKeys(ConfigReader.ReadProperty("cashwise_password"));
     }
@@ -71,25 +81,28 @@ public class SignUpPage {
     }
 
     public void sendUserInfo(WebDriver driver) throws InterruptedException {
-        name.sendKeys(ConfigReader.ReadProperty("cashwiseUser_name"));
-        lastName.sendKeys(ConfigReader.ReadProperty("cashwiseUser_lastName"));
-        nameOfBusiness.sendKeys(ConfigReader.ReadProperty("cashwiseUser_businessName"));
 
-        Thread.sleep(2000);
-
+        name.sendKeys(faker.name().firstName());
+        lastName.sendKeys(faker.name().lastName());
+        nameOfBusiness.sendKeys(companyName);
         Actions actions = new Actions(driver);
+        SeleniumUtils.waitForSec(1);
         actions.click(selectAreaOfBusinessBox).perform();
         actions.click(areaOfBusinessIT).perform();
-        address.sendKeys(ConfigReader.ReadProperty("cashwiseUser_address"));
+        address.sendKeys(faker.address().fullAddress());
         selectCurrencyButton.click();
-        Thread.sleep(2000);
+        SeleniumUtils.waitForSec(1);
         USDcurrency.click();
-        Thread.sleep(2000);
+        SeleniumUtils.waitForSec(2);
         BrowserUtils.clickWithJS(driver, finalSignUpButton);
-
-
+        SeleniumUtils.waitForSec(3);
 
     }
+
+    public void validationOfClientInfo() {
+        Assert.assertEquals(BrowserUtils.getText(headerNameOfCompany), companyName);
+    }
+
 
 }
 

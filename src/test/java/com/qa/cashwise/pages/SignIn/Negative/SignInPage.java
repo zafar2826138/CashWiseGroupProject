@@ -1,4 +1,4 @@
-package com.qa.cashwise.pages.Login.Negative;
+package com.qa.cashwise.pages.SignIn.Negative;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

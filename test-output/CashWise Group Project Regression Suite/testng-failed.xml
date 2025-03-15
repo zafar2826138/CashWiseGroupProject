@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CashWise Group Project Regression Suite]">
+  <test thread-count="5" name="CashWise Test Cases(failed)">
+    <classes>
+      <class name="com.qa.cashwise.tests.Sales.ClientsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="validateSalesFunctionality"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.cashwise.tests.Sales.ClientsTest -->
+      <class name="com.qa.cashwise.tests.Sales.ProductAndServicesTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="validateAddProductAndServicesFunctionality"/>
+        </methods>
+      </class> <!-- com.qa.cashwise.tests.Sales.ProductAndServicesTest -->
+      <class name="com.qa.cashwise.tests.Expenses.ProductAndServicesExpenseTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="addProductAndServicesInExpenses"/>
+        </methods>
+      </class> <!-- com.qa.cashwise.tests.Expenses.ProductAndServicesExpenseTest -->
+    </classes>
+  </test> <!-- CashWise Test Cases(failed) -->
+</suite> <!-- Failed suite [CashWise Group Project Regression Suite] -->

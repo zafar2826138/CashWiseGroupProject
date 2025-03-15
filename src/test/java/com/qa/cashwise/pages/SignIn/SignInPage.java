@@ -1,4 +1,4 @@
-package com.qa.cashwise.pages.Login;
+package com.qa.cashwise.pages.SignIn;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
