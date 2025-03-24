@@ -95,7 +95,7 @@ public class SignUpPage {
         USDcurrency.click();
         SeleniumUtils.waitForSec(2);
         BrowserUtils.clickWithJS(driver, finalSignUpButton);
-        SeleniumUtils.waitForSec(3);
+        SeleniumUtils.waitForSec(2);
 
     }
 
